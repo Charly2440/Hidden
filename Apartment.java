@@ -13,6 +13,39 @@ public class Apartment extends World
      * Constructor for objects of class Apartment.
      * 
      */
+    public static class Enigma{
+        private static boolean engima1 = false;
+        private static boolean engima2 = false;
+        private static boolean engima3 = false;
+        private static boolean engima4 = false;
+        
+        public boolean getEnigma1(){
+            return engima1;
+        }
+        public boolean getEnigma2(){
+            return engima2;
+        }
+        public boolean getEnigma3(){
+            return engima3;
+        }
+        public boolean getEnigma4(){
+            return engima4;
+        }
+        
+        public void setEnigma1(boolean resolucion){
+            engima1 = resolucion;
+        }
+        public void setEnigma2(boolean resolucion){
+            engima2 = resolucion;
+        }
+        public void setEnigma3(boolean resolucion){
+            engima3 = resolucion;
+        }
+        public void setEnigma4(boolean resolucion){
+            engima4 = resolucion;
+        }
+    }
+    
     public Apartment()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

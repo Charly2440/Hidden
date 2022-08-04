@@ -16,9 +16,24 @@ public class Email extends Actor
      
     public void act()
     {
-        // Add your action code here.
+        Apartment.Enigma enigmas;
+        enigmas = new Apartment.Enigma();
+        
         if (Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new Primerenigma());
+            //System.out.println(enigmas.getEnigma1());
+            if (enigmas.getEnigma1() == false && enigmas.getEnigma2() == false && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+              Greenfoot.setWorld(new Primerenigma());
+            }
+            else if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == false && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+              Greenfoot.setWorld(new Segundoenigma());
+            }
+            else if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == true && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+              Greenfoot.setWorld(new Tercerenigma());
+            }
+            else if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == true && enigmas.getEnigma3() == true && enigmas.getEnigma4() == false){
+              Greenfoot.setWorld(new Cuartoenigma());
+            }
+            
         }
     }
 }

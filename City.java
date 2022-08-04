@@ -29,21 +29,35 @@ public class City extends World
      */
     private void prepare()
     {
+        Apartment.Enigma enigmas;
+        enigmas = new Apartment.Enigma();
+
         Character character = new Character();
         addObject(character,140,354);
         Apartmentbutton apartmentbutton = new Apartmentbutton();
         addObject(apartmentbutton,107,356);
 
-        //if (enigma1 == true){
-        Firstnpc firstnpc = new Firstnpc();
-        addObject(firstnpc,253,135);
-        //}
+        
+        if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == false && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+            Firstnpc firstnpc2 = new Firstnpc();
+            addObject(firstnpc2,252,130);
+        }
+        
 
-        removeObject(firstnpc);
-        Firstnpc firstnpc2 = new Firstnpc();
-        addObject(firstnpc2,252,130);
-        Secondnpc secondnpc = new Secondnpc();
-        addObject(secondnpc,570,352);
-        removeObject(secondnpc);
+        if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == false && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+            Secondnpc secondnpc = new Secondnpc();
+            addObject(secondnpc,570,352);
+        }
+
+        if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == true && enigmas.getEnigma3() == false && enigmas.getEnigma4() == false){
+            Thirdpc thirdpc = new Thirdpc();
+            addObject(thirdpc,531,34);
+        }
+
+        if (enigmas.getEnigma1() == true && enigmas.getEnigma2() == true && enigmas.getEnigma3() == true && enigmas.getEnigma4() == false){
+            Fourthpc fourthpc = new Fourthpc();
+            addObject(fourthpc,58,113);
+        }
+
     }
 }
